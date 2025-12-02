@@ -1,0 +1,405 @@
+<!DOCTYPE html> 
+<html>
+  <head> 
+    <meta charset="UTF-8">
+    <title>Para mi novio</title>
+
+    <style>
+        body{
+            background-color: #f0aaba;
+        }
+
+        main{
+          width: 800px;
+          background-color: rgb(248, 200, 214);
+          border-radius: 15px;
+          margin: 20px auto;
+          padding: 20px;
+          overflow: visible;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            background: rgb(244, 193, 197);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav button {
+          padding: 10px 20px;
+          border: none;
+          background: rgb(255, 202, 202);
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        section {
+          padding: 20px;
+          display: none;
+        }
+        .active {
+          display: block;
+        }
+
+        .top-imagen, .bottom-imagen{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+        }
+
+        .top-imagen{
+          top: -5px;
+        }
+
+        .bottom-imagen{
+          bottom: 310px;
+        } 
+
+        header h1{
+          text-align: center;
+          color: #fafaf2;
+        }
+
+        P{
+          text-align: center;
+          color: #9e7e89;
+        }
+
+        .calendario {
+          max-width: 400px;
+          margin: auto;
+          background: rgb(255, 202, 202);
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 5px;
+          text-align: center;
+        }
+
+        .dia {
+          padding: 10px;
+          background: #f8bbd0;
+          border-radius: 6px;
+        }
+
+
+        .galeria-fotos {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 15px;
+          margin-top: 20px;
+        }
+
+        .foto-slot {
+          position: relative;
+          padding: 10px;
+          background: #e7bfcb; 
+          border: 4px double #d46a6a; 
+          border-radius: 15px;
+          box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .foto-slot:hover {
+          transform: scale(1.05);
+          box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+        }
+
+        .foto-slot img {
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+          border: 2px solid #d46a6a; 
+          box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+          object-fit: cover;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+        .foto-slot::after {
+          content: "❤";
+          position: absolute;
+          bottom: 8px;
+          right: 12px;
+          font-size: 18px;
+          color: #d46a6a;
+          opacity: 0.7;
+        }
+
+        .cosas-amo, .canciones {
+  background: #ffd0ef; 
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.cosas-amo ul, .canciones ul {
+  list-style-type: "💗 ";
+  padding-left: 20px;
+  color: #5a3c45;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+
+    </style>
+
+  </head>
+
+  <body>
+      <main>
+
+    <img src="imagenes/moño (1).png" class="top-imagen">
+
+      <header>
+    <h1>PARA TI MI VIDA</h1>
+    </header>
+
+    <p>eres una persona muy especial para mi te amo</p>
+    <p>se supone que tenia que dartelo antes no lo he terminado pero de igual manera te lo doy gracias</p>
+    <img src="imagenes/amor l.png" class="bottom-imagen">
+
+        <nav>
+        <button onclick="mostrar('calendario')">Calendario</button>
+        <button onclick="mostrar('fotos')">Fotos de Recuerdos</button>
+        <button onclick="mostrar('cosas')">Cosas que Amo de Ti</button>
+        <button onclick="mostrar('musica')">Canciones que me Recuerdan a Ti</button>
+        </nav>
+
+      </main>
+  </body>
+
+
+    <section id="calendario" class="active">
+          <div class="calendario">
+            <h2>Agosto 2025</h2>
+            <div class="grid">
+                <div class="dia"><strong>Dom</strong></div>
+                <div class="dia"><strong>Lun</strong></div>
+                <div class="dia"><strong>Mar</strong></div>
+                <div class="dia"><strong>Mié</strong></div>
+                <div class="dia"><strong>Jue</strong></div>
+                <div class="dia"><strong>Vie</strong></div>
+                <div class="dia"><strong>Sáb</strong></div>
+                
+                
+                <div class="dia">1</div><div class="dia">2</div>
+                <div class="dia">3</div>
+                <div class="dia">4</div>
+                <div class="dia">5</div>
+                <div class="dia">6</div>
+                <div class="dia">7</div>
+                <div class="dia">8</div>
+                <div class="dia">9</div>
+                <div class="dia">10</div>
+                <div class="dia">11</div>
+                <div class="dia">12</div>
+                <div class="dia">13</div>
+                <div class="dia">14</div>
+                <div class="dia">15</div>
+                <div class="dia">16</div>
+                <div class="dia">17</div>
+                <div class="dia">18</div>
+                <div class="dia">19</div>
+                <div class="dia">20</div>
+                <div class="dia">21</div>
+                <div class="dia" style="background:#ff80ab; font-weight:bold;">22💗</div>
+                <div class="dia">23</div>
+                <div class="dia">24</div>
+                <div class="dia">25</div>
+                <div class="dia">26</div>
+                <div class="dia">27</div>
+                <div class="dia">28</div>
+                <div class="dia">29</div>
+                <div class="dia">30</div>
+                <div class="dia">31</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fotos" class="foto-container">
+      <h2>Fotos de Recuerdos</h2>
+
+  <div class="galeria-fotos">
+    <div class="foto-slot"><img src="imagenes/2.jpeg" alt="Recuerdo 1"></div>
+    <div class="foto-slot"><img src="imagenes/WhatsApp Image 2025-11-26 at 3.20.37 PM.jpeg" alt="Recuerdo 2"></div>
+    <div class="foto-slot"><img src="imagenes/3.jpeg" alt="Recuerdo 3"></div>
+    <div class="foto-slot"><img src="imagenes/4.jpeg" alt="Recuerdo 4"></div>
+    <div class="foto-slot"><img src="imagenes/5.jpeg" alt="Recuerdo 5"></div>
+    <div class="foto-slot"><img src="imagenes/66.jpeg" alt="Recuerdo 6"></div>
+    <div class="foto-slot"><img src="imagenes/7.jpeg" alt="Recuerdo 7"></div>
+    <div class="foto-slot"><img src="imagenes/8.jpeg" alt="Recuerdo 8"></div>
+    <div class="foto-slot"><img src="imagenes/9.jpeg" alt="Recuerdo 9"></div>
+    <div class="foto-slot"><img src="imagenes/10.jpeg" alt="Recuerdo 10"></div>
+    <div class="foto-slot"><img src="imagenes/11.jpeg" alt="Recuerdo 11"></div>
+    <div class="foto-slot"><img src="imagenes/12.jpeg" alt="Recuerdo 12"></div>
+    <div class="foto-slot"><img src="imagenes/13.jpeg" alt="Recuerdo 13"></div>
+    <div class="foto-slot"><img src="imagenes/14.jpeg" alt="Recuerdo 14"></div>
+    <div class="foto-slot"><img src="imagenes/15.jpeg" alt="Recuerdo 15"></div>
+    <div class="foto-slot"><img src="imagenes/16.jpeg" alt="Recuerdo 16"></div>
+    <div class="foto-slot"><img src="imagenes/17.jpeg" alt="Recuerdo 17"></div>
+    <div class="foto-slot"><img src="imagenes/18.jpeg" alt="Recuerdo 18"></div>
+    <div class="foto-slot"><img src="imagenes/19.jpeg" alt="Recuerdo 19"></div>
+    <div class="foto-slot"><img src="imagenes/20.jpeg" alt="Recuerdo 20"></div>
+    <div class="foto-slot"><img src="imagenes/21.jpeg" alt="Recuerdo 21"></div>
+    <div class="foto-slot"><img src="imagenes/22.jpeg" alt="Recuerdo 22"></div>
+    <div class="foto-slot"><img src="imagenes/23.jpeg" alt="Recuerdo 23"></div>
+    <div class="foto-slot"><img src="imagenes/24.jpeg" alt="Recuerdo 24"></div>
+    <div class="foto-slot"><img src="imagenes/25.jpeg" alt="Recuerdo 25"></div>
+    <div class="foto-slot"><img src="imagenes/26.jpeg" alt="Recuerdo 26"></div>
+    <div class="foto-slot"><img src="imagenes/27.jpeg" alt="Recuerdo 27"></div>
+    <div class="foto-slot"><img src="imagenes/28.jpeg" alt="Recuerdo 28"></div>
+    <div class="foto-slot"><img src="imagenes/29.jpeg" alt="Recuerdo 29"></div>
+    <div class="foto-slot"><img src="imagenes/30.jpeg" alt="Recuerdo 30"></div>
+    <div class="foto-slot"><img src="imagenes/31.jpeg" alt="Recuerdo 31"></div>
+    <div class="foto-slot"><img src="imagenes/32.jpeg" alt="Recuerdo 32"></div>
+  </div>
+</section>
+
+
+    <section id="cosas" class="cosas-amo">
+        <h2>Cosas que Amo de Ti</h2>
+        <ul>
+            <li>primero que nada tu mirada</li>
+            <li>Tu forma de hablar</li>
+            <li>tu manera de explicar las cosas</li>
+            <li>Lo especial que eres para mí</li>
+            <li>Tu sonrisa que me alegra el día</li>
+            <li>Tu sentido del humor que siempre me hace reír</li>
+            <li>tu forma de ser</li>
+            <li>que eres pichador 3 mil</li>
+            <li>tus gustos</li>
+            <li>la manera en la que te concentras</li>
+            <li>tu forma de hacer las cosas</li>
+            <li>tus miedos</li>
+            <li>tus bromas</li>
+            <li>la manera en la que caminas</li>
+            <li>que se te mueven las orejas cuando comes</li>
+            <li>la manera en que exprisas cuando algo te gusta</li>
+            <li>tu manera de hablar y me dices amoshito</li>
+            <li>que te guste el helado</li>
+            <li>que te gusta moverte</li>
+            <li>tu energia</li>
+            <li>tu sonrisa</li>
+            <li>que te gustan los animales</li>
+            <li>tu linda carita</li>
+            <li>tu manere de comer</li>
+            <li>que te gusta tragar</li>
+            <li>esa risa tuya hermorsa</li>
+            <li>la manera que pones tus manos cuando estas pardo</li>
+            <li>tu pelo me gusta esos cachitos que tienes cuando te lo acomodas</li>
+            <li>tu manera tan curiosa que mueves las manos</li>
+            <li>cuando comes y se te hace la pasa me encanta</li>
+            <li>tu olor</li>
+            <li>tu forma de conducir</li>
+            <li> cómo disfrutas cada bocado sin prisa, como si fuera un ritual</li>
+            <li> el ritmo suave cuando masticas que me calma sin que te des cuenta</li>
+            <li> la paz que siento cuando no hablamos y igual estamos juntos</li>
+            <li>cuando te pierdes en tus pensamientos y el mundo se vuelve pequeño</li>
+            <li> esa risa que guardas al inicio y luego se suelta</li>
+            <li> conviertes cosas complicadas en historias que entiendo y recuerdo</li>
+            <li> ese caos organizado que solo tú comprendes y a mí me encanta</li>
+            <li> la manera en que caminas cuando estás emocionado, un poco más rápido</li>
+            <li> suave, firme, y siempre cuidando no herir</li>
+            <li> la manera en que te acomodas tres veces o mas antes de cerrar los ojos</li>
+            <li>haces soluciones raras que terminan siendo geniales</li>
+            <li>chistes malos que me hacen reír solo porque eres tú</li>
+            <li> directa, sin adornos, pero sincera y profunda</li>
+            <li>preguntas que nadie más haría </li>
+            <li> disfrutas un plan casero</li>
+            <li>cuando hablas suave y todo parece más cercano</li>
+            <li> esos mini tropiezos que te hacen más humano y adorable</li>
+            <li> escuchas una canción hasta entenderla por dentro</li>
+            <li> dices la verdad aunque sea incómoda, y cuidas al decirla</li>
+            <li> llegas temprano para cuidar el momento</li>
+            <li> inventas atajos que no existen y funcionan</li>
+            <li> haces preguntas que me ayudan a conocerme</li>
+            <li> te concentras hasta que el mundo desaparece</li>
+            <li> notas cosas mínimas que otros no ven</li>
+            <li> te detienes en detalles y me preguntas historias</li>
+            <li> siempre regresas más tú, como si hubieras aprendido algo</li>
+            <li> haces hueco en tu rutina para mí, y eso es amor</li>
+            <li>como no recuerdas el nombre de las personas</li>
+            <p>y podria seguir porque amo mucho mas que esas pequeñas cosas</p>
+        </ul>
+    </section>
+
+
+
+    <section id="musica" class="canciones">
+        <h2>Canciones que me Recuerdan a Ti</h2>
+        <ul>
+            <li>Amarrame </li>
+            <li>llora llora </li>
+            <li>melodia </li>
+            <li>mi sueno </li>
+            <li>en el proximo big bang </li>
+              <li>de hielo </li>
+              <li>enamorado tuyo </li>
+              <li>abrazado a ti </li>
+              <li>otro atardecer </li>
+              <li>mi corazon es tuyo </li>
+              <li>nunca es suficiente </li>
+              <li>una fotografia </li>
+              <li>olimpo </li>
+              <li>frances limon </li>
+              <li>baile inolvidable </li>
+              <li>Perfect</li>
+              <li>Make You Feel My Love</li>
+              <li>A Thousand Years</li>
+              <li>Stay With Me</li>
+              <li>All of Me</li>
+              <li>Something</li>
+              <li>Yellow</li>
+              <li>With or Without You</li>
+              <li>Lovesong</li>
+              <li>Amor Eterno</li>
+              <li>El Triste</li>
+              <li>Todo Cambió</li>
+              <li>Entra en mi Vida</li>
+              <li>Vivir Mi Vida</li>
+              <li>Bachata Rosa</li>
+              <li>Conteo Regresivo</li>
+              <li>Dile a Ella</li>
+              <li>Contigo Aprendí</li>
+              <li>Sabor a Mí</li>
+              <li>Besos en Guerra</li>
+              <li>Solamente Tú</li>
+              <li>perdón</li>
+              <li>la noche mas linda</li>
+              <li>limón y sal</li>
+              <li>me rehúso</li>
+              <li>weltita</li>
+              <li>el poder nuestro es</li>
+              <li>niña bonita</li>
+              <li>alumbre</li>
+
+              <p>entre muchas mas cualquiera de bad bunny me recuerda a ti el cuarteto me recuerdan a 
+              as veces que eschabamos musica juntos</p>
+
+
+
+              
+
+        </ul>
+    </section>
+
+    <script>
+        function mostrar(id) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+
+
+
